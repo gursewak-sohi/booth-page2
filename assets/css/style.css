@@ -1070,6 +1070,14 @@ select {
   top: 50%;
 }
 
+.top-20 {
+  top: 5rem;
+}
+
+.top-\[90px\] {
+  top: 90px;
+}
+
 .isolate {
   isolation: isolate;
 }
