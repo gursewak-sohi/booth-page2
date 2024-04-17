@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.svg" />
+    <title>Booths</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="antialiased text-blue-950 text-sm lg:text-base tracking-tight">
+   
+    <section class="bg-blue-950">
+        <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 overflow-hidden">
+            <div class="relative flex-shrink-0 px-6 py-4 xl:py-6 z-10">
+                <div class="w-40 h-40 bg-blue-950 rotate-45 absolute -right-10 top-1/2 -translate-y-1/2 rounded-lg hidden lg:block"></div>
+                <a class="relative top-1" target="_blank" href="https://creatorcon.com/">
+                    <img class="w-44 md:w-72" src="assets/images/logo-creatorcon-wy.webp" alt="logo"/>
+                </a> 
+            </div>
+            <div class="bg-yellow-300 px-6 lg:px-24 pr-6 py-4 xl:py-6 font-medium relative text-center lg:text-start">
+                <p>Explore our CreatorCon <b>booth options</b>  to showcase your brand, connect with Influencers, Industry Leaders and maximise your presence at the event. Whether you're looking to engage with our diverse audience or generate leads, we have the perfect booth package to help you achieve your goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section x-data="{ activeTab: 'tab1' }" class="py-5 md:py-8">
+        <div class="px-6 xl:px-10">
+            <div class="w-full flex flex-col items-center justify-center">
+                <h1 class="text-xl lg:text-3xl text-center font-bold mb-4 lg:mb-6 tracking-tight">Choose your booth</h1>
+                 <div class="p-0.5 border border-blue-950 flex text-sm lg:text-base rounded-full overflow-hidden">
+                    <button @click="activeTab = 'tab1'" :class="{ 'bg-blue-950 text-white !font-bold': activeTab === 'tab1' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Standard Booths</button>
+                    <button @click="activeTab = 'tab2'" :class="{ 'bg-blue-950 text-white !font-bold': activeTab === 'tab2' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Self Build Spaces</button>
+                 </div>
+            </div>
+
+            <div x-show="activeTab === 'tab1'">
+                <div class="flex mt-10 justify-center gap-10 lg:gap-10 max-w-7xl mx-auto relative">
+                    <div class="swiper">
+                        <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-8">
+                            <div class="swiper-slide lg:h-full">
+                                <div class="flex flex-col rounded-3xl overflow-hidden border border-gray-200 w-full toggle-container-full lg:h-full">
+                                    <div class="flex flex-col">
+                                        <div class="uppercase bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 font-extrabold py-2 px-4 text-center">Maximum Exposure</div>
+                                        <div class="py-4 text-center">
+                                            <h2 class="text-4xl font-extrabold px-4">Silver</h2>
+                                            <h6 class="text-base font-medium">Package</h6>
+                                        </div>
+                                        <div class="flex justify-center mb-4">
+                                            <div class="bg-yellow-300 px-4 rounded-full text-sm font-semibold py-1">Only 6 Remaining</div>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5 flex flex-col gap-2 lg:h-44">
+                                            <p class="text-sm w-full"><span class="font-semibold">Build Your Own Booth (Space only):</span>  Designed for exhibitors with custom-crafted booth, this option is ideal for exhibitors who want to showcase their unique design and build-out.
+                                            </p>
+                                            <p class="text-sm w-full"><span  class="font-semibold">Ready-Made Booth (Shell Scheme):</span> Perfect for exhibitors seeking a hassle-free solution. Our team will ensure the construction of a standardised booth setup on your behalf.
+                                            </p>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5">
+                                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                                                <button class="flex items-center text-sm gap-2 uppercase font-bold toggle-btn-full whitespace-nowrap">
+                                                    <span>More Info </span>
+                                                    <img class="-rotate-90" src="assets/images/arrow.svg" alt="arrow"/>
+                                                </button>
+                                            </div>
+                                            <div class="content-full">
+                                                <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Marketing Package: Includes website listing and company logo on our official CreatorCon website</li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Business profile on CreatorCon app</li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Two CreatorCon staff passes (per 9sqm)</li>
+                                                </ul>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 text-center text-sm font-medium">
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300">Size</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">8 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">9 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">18 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">27 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">36 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">54 sqm</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300">Dimentions (length x width)</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">4m x 2m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">3m x 3m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">6m x 3m / 9m x 2m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">9m x 3m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">6m x 6m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">9m x 6m</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300">Space Only Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold">$ 4,880</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center font-bold">$ 5,490</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold">$ 10,980</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center font-bold">$ 16,470</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold">$ 21,960</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center font-bold">$ 32,940</div>
+                                        </div>
+                                        <div class="flex flex-col border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300">Shell Scheme Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold">$ 5,520</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center font-bold">$ 6,210</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold">$ 12,420</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100  h-16 flex items-center justify-center font-bold">$ 18,630</div>
+                                            <div class="border-t border-gray-200 px-2 py-3  h-16 flex items-center justify-center  font-bold">$ 24,840</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center font-bold">$ 32,260</div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="py-5 flex justify-center mt-auto">
+                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide lg:h-full">
+                                <div class="flex flex-col rounded-3xl overflow-hidden border border-gray-200 w-full  toggle-container-full  lg:h-full">
+                                    <div class="flex flex-col">
+                                        <div class="uppercase bg-gradient-to-r from-amber-300 via-amber-100 to-amber-300 font-extrabold py-2 px-4 text-center">Big Branding</div>
+                                        <div class="py-4 text-center">
+                                            <h2 class="text-4xl font-extrabold px-4">Gold</h2>
+                                            <h6 class="text-base font-medium">Package</h6>
+                                        </div>
+                                        <div class="flex justify-center mb-4">
+                                            <div class="bg-green-300 px-4 rounded-full text-sm font-semibold py-1">Available</div>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5 flex flex-col gap-2 lg:h-44">
+                                            <p class="text-sm flex items-center gap-2 w-full">Stand out and lead the way by taking centre stage and securing a premium location with commanding unparalleled visibility across our network and amongst event attendees. Be seen first and make a lasting impression.
+                                            </p>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5">
+                                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                                                <button class="flex items-center text-sm gap-2 uppercase font-bold toggle-btn-full whitespace-nowrap">
+                                                    <span>More Info </span>
+                                                    <img class="-rotate-90" src="assets/images/arrow.svg" alt="arrow"/>
+                                                </button>
+                                            </div>
+                                            <div class="content-full">
+                                                <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt="">All of Silver, plus +</li>
+                                                     <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Premium location</li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Company logo displayed on all marketing materials as premium sponsor where applicable</li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Featured on 2 x posts and 1 x story across social media throughout event
+                                                    </li>
+                                                </ul>   
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 text-center text-sm font-medium">
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-amber-300 via-amber-100 to-amber-300">Size</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">18 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">27 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">36 sqm</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-amber-300 via-amber-100 to-amber-300">Dimentions (length x width)</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">6m x 3m / 9m x 2m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">9m x 3m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">6m x 6m</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-amber-300 via-amber-100 to-amber-300">Space Only Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$15,980</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">$21,470</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$26,960</div>
+                                        </div>
+                                        <div class="flex flex-col border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-amber-300 via-amber-100 to-amber-300">Shell Scheme Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$17,420</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">$23,630</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$29,840</div>
+                                         </div>
+                
+                                    </div>
+                                    <div class="py-5 flex justify-center mt-auto border-t border-gray-200">
+                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide lg:h-full">
+                                <div class="flex flex-col rounded-3xl  overflow-hidden border border-stone-200 w-full toggle-container-full  lg:h-full">
+                                    <div class="flex flex-col">
+                                        <div class="uppercase bg-gradient-to-r from-stone-300 via-stone-100 to-stone-300 font-extrabold py-2 px-4 text-center">Most Popular</div>
+                                        <div class="py-4 text-center">
+                                            <h2 class="text-4xl font-extrabold px-4">Platinum</h2>
+                                            <h6 class="text-base font-medium">Package</h6>
+                                        </div>
+                                        <div class="flex justify-center mb-4">
+                                            <div class="bg-green-300 px-4 rounded-full text-sm font-semibold py-1">Available</div>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5 flex flex-col gap-2 lg:h-44">
+                                            <p class="text-sm flex items-center gap-2 w-full">Secure supreme prominence with our top-tier placement. This premium location ensures maximum visibility to all exhibitors and attendees, reinforcing your brand’s leadership and commitment to excellence in the event.
+                                            </p>
+                                        </div>
+                                        <div class="border-t border-gray-200 px-4 py-5">
+                                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold whitespace-nowrap">What’s Included</div>
+                                                <button class="flex items-center text-sm gap-2 uppercase font-bold toggle-btn-full whitespace-nowrap">
+                                                    <span>More Info </span>
+                                                    <img class="-rotate-90" src="assets/images/arrow.svg" alt="arrow"/>
+                                                </button>
+                                            </div>
+                                            <div class="content-full">
+                                                <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> All of Gold, plus +</li>
+                                                     <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> 1x email marketing advertisement sent out to our database of ticket holders pre-show
+                                                    </li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Full page ad in show guide in CreatorCon app
+                                                    </li>
+                                                    <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> Sponsor profile on the CreatorCon app
+                                                    </li>
+                                                   
+                                                </ul> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 text-center text-sm font-medium">
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-stone-300 via-stone-100 to-stone-300">Size</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">36 sqm</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">54 sqm</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-stone-300 via-stone-100 to-stone-300">Dimentions (length x width)</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">6m x 6m</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">9m x 6m</div>
+                                        </div>
+                                        <div class="flex flex-col border-r border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-stone-300 via-stone-100 to-stone-300">Space Only Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$31,960</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">$42,940</div>
+                                        </div>
+                                        <div class="flex flex-col border-b border-gray-200">
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center font-bold bg-gradient-to-r from-stone-300 via-stone-100 to-stone-300">Shell Scheme Price $AUD</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 h-16 flex items-center justify-center">$34,840</div>
+                                            <div class="border-t border-gray-200 px-2 py-3 bg-gray-100 h-16 flex items-center justify-center">$47,260</div>
+                                         </div>
+                                    </div>
+                                    <div class="py-5 flex justify-center mt-auto border-t border-gray-200">
+                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                     <!-- If we need navigation buttons -->
+                     <div class="swiper-button-prev bg-blue-950 w-10 h-10 rounded-full lg:hidden"></div>
+                     <div class="swiper-button-next bg-blue-950 w-10 h-10 rounded-full lg:hidden"></div>
+                </div>
+            </div>
+           
+            <div x-show="activeTab === 'tab2'">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto mt-10 gap-4">
+                    <div class="flex flex-col w-full bg-gray-50 p-3 rounded-3xl">
+                        <div class="bg-white py-4 px-2 flex flex-col items-center rounded-2xl">
+                            <div class="relative">
+                                <img class="grayscale" width="110" src="assets/images/custom-a-thumbnail.webp" alt="icon">
+                                <div class="absolute top-1/2 w-full -translate-y-1/2 text-center bg-gradient-to-r from-transparent via-gray-900 via-50% to-transparent text-white uppercase font-bold">Sold Out</div>
+                            </div>
+                            <div class="py-4 text-center">
+                                <h2 class="text-4xl font-extrabold px-4">Custom A</h2>
+                                <h6 class="text-base font-medium">SELF-BUILD SPACE</h6>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center text-lg font-semibold">6m x 7m (42sqm)</div>
+                        <div class="border-t border-gray-200 py-5">
+                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                            </div>
+                            <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> 14 Company tickets</li>
+                             </ul>
+                        </div>
+                        <h2 class="text-2xl text-center font-extrabold px-4 mt-3">AU$ 80,999</h2>
+                        <div class="pt-5 flex justify-center">
+                            <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-full font-bold text-center shadow-md active:scale-95" href="javascript:;">View Locations</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full bg-red-50 p-3 rounded-3xl">
+                        <div class="bg-white py-4 px-2 flex flex-col items-center rounded-2xl">
+                            <div class="relative">
+                                <img width="110" src="assets/images/custom-b-thumbnail.webp" alt="icon">
+                            </div>
+                            <div class="py-4 text-center">
+                                <h2 class="text-4xl font-extrabold px-4">Custom B</h2>
+                                <h6 class="text-base font-medium">SELF-BUILD SPACE</h6>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center text-lg font-semibold">7m x 10m (70sqm)</div>
+                        <div class="border-t border-gray-200 py-5">
+                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                            </div>
+                            <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> 16 Company tickets</li>
+                             </ul>
+                        </div>
+                        <h2 class="text-2xl text-center font-extrabold px-4  mt-3">AU$ 80,999</h2>
+                        <div class="pt-5 flex justify-center">
+                            <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-full font-bold text-center  shadow-md active:scale-95" href="javascript:;">View Locations</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full bg-green-50 p-3 rounded-3xl">
+                        <div class="bg-white py-4 px-2 flex flex-col items-center rounded-2xl">
+                            <div class="relative">
+                                <img width="110" src="assets/images/custom-c-thumbnail.webp" alt="icon">
+                            </div>
+                            <div class="py-4 text-center">
+                                <h2 class="text-4xl font-extrabold px-4">Custom C</h2>
+                                <h6 class="text-base font-medium">SELF-BUILD SPACE</h6>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center text-lg font-semibold">7.5m x 10m (75sqm)</div>
+                        <div class="border-t border-gray-200 py-5">
+                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                            </div>
+                            <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> 18 Company tickets</li>
+                             </ul>
+                        </div>
+                        <h2 class="text-2xl text-center font-extrabold px-4  mt-3">AU$ 80,999</h2>
+                        <div class="pt-5 flex justify-center">
+                            <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-full font-bold text-center  shadow-md active:scale-95" href="javascript:;">View Locations</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full bg-purple-50 p-3 rounded-3xl">
+                        <div class="bg-white py-4 px-2 flex flex-col items-center rounded-2xl">
+                            <div class="relative">
+                                <img width="110" class="h-[110px]" src="assets/images/custom-d-thumbnail.webp" alt="icon">
+                            </div>
+                            <div class="py-4 text-center">
+                                <h2 class="text-4xl font-extrabold px-4">Custom D</h2>
+                                <h6 class="text-base font-medium">SELF-BUILD SPACE</h6>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center text-lg font-semibold">10m x 10m (100sqm)</div>
+                        <div class="border-t border-gray-200 py-5">
+                            <div class="flex items-center justify-between flex-row gap-2 pr-2">
+                                <div class="relative  w-full flex items-center gap-3 uppercase text-sm font-bold  whitespace-nowrap">What’s Included</div>
+                            </div>
+                            <ul class="text-sm  flex flex-col gap-1 mt-4">
+                                <li class="flex items-start gap-2"><img class="relative top-0.5" src="assets/images/check.svg" alt=""> 22 Company tickets</li>
+                             </ul>
+                        </div>
+                        <h2 class="text-2xl text-center font-extrabold px-4  mt-3">AU$ 101,900</h2>
+                        <div class="pt-5 flex justify-center">
+                            <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-full font-bold text-center  shadow-md active:scale-95" href="javascript:;">View Locations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+</html>
