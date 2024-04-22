@@ -13,17 +13,17 @@
     <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
-<body class="antialiased text-blue-950 text-sm lg:text-base tracking-tight">
+<body class="antialiased text-gray-900 text-sm lg:text-base tracking-tight">
    
-    <section class="bg-blue-950">
+    <section class="bg-gray-900">
         <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-2 overflow-hidden">
-            <div class="relative flex-shrink-0 px-6 py-4 xl:py-6 z-10">
-                <div class="w-40 h-40 bg-blue-950 rotate-45 absolute -right-10 top-1/2 -translate-y-1/2 rounded-lg hidden lg:block"></div>
+            <div class="relative flex-shrink-0 px-6 py-4 xl:py-4 z-10">
+                <div class="w-40 h-40 bg-gray-900 rotate-45 absolute -right-10 top-1/2 -translate-y-1/2 rounded-lg hidden lg:block"></div>
                 <a class="relative top-1" target="_blank" href="https://creatorcon.com/">
-                    <img class="w-44 md:w-72" src="assets/images/logo-creatorcon-wy.webp" alt="logo"/>
+                    <img class="w-44 md:w-72" src="assets/images/Creatorcon_WhiteLogo.svg" alt="logo"/>
                 </a> 
             </div>
-            <div class="bg-yellow-300 px-6 lg:px-24 pr-6 py-4 xl:py-6 font-medium relative text-center lg:text-start">
+            <div class="bg-gradient-to-r from-[#EDE36D] via-[#3DBDA9] to-[#0DB3B9] px-6 lg:px-24 pr-6 py-4 xl:py-6 font-medium relative text-center lg:text-start">
                 <p>Explore our CreatorCon <b>booth options</b>  to showcase your brand, connect with Influencers, Industry Leaders and maximise your presence at the event. Whether you're looking to engage with our diverse audience or generate leads, we have the perfect booth package to help you achieve your goals.</p>
             </div>
         </div>
@@ -32,11 +32,11 @@
     <section x-data="{ activeTab: 'tab1' }" class="py-5 md:py-8">
         <div class="px-6 xl:px-10">
             <div class="w-full flex flex-col items-center justify-center">
-                <h1 class="text-xl lg:text-3xl text-center font-bold mb-4 lg:mb-6 tracking-tight">Choose your booth</h1>
-                 <div class="p-0.5 border border-blue-950 flex text-sm lg:text-base rounded-full overflow-hidden">
-                    <button @click="activeTab = 'tab1'" :class="{ 'bg-blue-950 text-white !font-bold': activeTab === 'tab1' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Standard Booths</button>
-                    <button @click="activeTab = 'tab2'" :class="{ 'bg-blue-950 text-white !font-bold': activeTab === 'tab2' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Self Build Spaces</button>
-                 </div>
+                <h1 class="text-xl lg:text-3xl text-center font-bold  tracking-tight">Choose your booth</h1>
+                 <!-- <div class="p-0.5 border border-gray-900 flex text-sm lg:text-base rounded-full overflow-hidden mt-4 lg:mt-6">
+                    <button @click="activeTab = 'tab1'" :class="{ 'bg-gray-900 text-white !font-bold': activeTab === 'tab1' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Standard Booths</button>
+                    <button @click="activeTab = 'tab2'" :class="{ 'bg-gray-900 text-white !font-bold': activeTab === 'tab2' }" class="px-4 lg:px-6 py-2 font-semibold rounded-full" type="button">Self Build Spaces</button>
+                 </div> -->
             </div>
 
             <div x-show="activeTab === 'tab1'">
@@ -117,7 +117,7 @@
                                        
                                     </div>
                                     <div class="py-5 flex justify-center mt-auto">
-                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                        <a class="text-lg bg-gradient-to-r from-[#EDE36D] via-[#3DBDA9] to-[#0DB3B9] text-white px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-gray-100 active:scale-95" href="javascript:;">Book Now</a>
                                     </div>
                                     
                                 </div>
@@ -131,7 +131,7 @@
                                             <h6 class="text-base font-medium">Package</h6>
                                         </div>
                                         <div class="flex justify-center mb-4">
-                                            <div class="bg-green-300 px-4 rounded-full text-sm font-semibold py-1">Available</div>
+                                            <div class="bg-[#0DB3B9] px-4 rounded-full text-sm font-semibold py-1 text-white">Available</div>
                                         </div>
                                         <div class="border-t border-gray-200 px-4 py-5 flex flex-col gap-2 lg:h-44">
                                             <p class="text-sm flex items-center gap-2 w-full">Stand out and lead the way by taking centre stage and securing a premium location with commanding unparalleled visibility across our network and amongst event attendees. Be seen first and make a lasting impression.
@@ -184,7 +184,7 @@
                 
                                     </div>
                                     <div class="py-5 flex justify-center mt-auto border-t border-gray-200">
-                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                        <a class="text-lg bg-gradient-to-r from-[#EDE36D] via-[#3DBDA9] to-[#0DB3B9] text-white px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-gray-100 active:scale-95" href="javascript:;">Book Now</a>
                                     </div>
                                     
                                 </div>
@@ -198,7 +198,7 @@
                                             <h6 class="text-base font-medium">Package</h6>
                                         </div>
                                         <div class="flex justify-center mb-4">
-                                            <div class="bg-green-300 px-4 rounded-full text-sm font-semibold py-1">Available</div>
+                                            <div class="bg-[#0DB3B9] px-4 rounded-full text-sm font-semibold py-1 text-white">Available</div>
                                         </div>
                                         <div class="border-t border-gray-200 px-4 py-5 flex flex-col gap-2 lg:h-44">
                                             <p class="text-sm flex items-center gap-2 w-full">Secure supreme prominence with our top-tier placement. This premium location ensures maximum visibility to all exhibitors and attendees, reinforcing your brand’s leadership and commitment to excellence in the event.
@@ -249,7 +249,7 @@
                                          </div>
                                     </div>
                                     <div class="py-5 flex justify-center mt-auto border-t border-gray-200">
-                                        <a class="text-lg bg-yellow-300 px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-yellow-100 active:scale-95" href="javascript:;">Book Now</a>
+                                        <a class="text-lg bg-gradient-to-r from-[#EDE36D] via-[#3DBDA9] to-[#0DB3B9] text-white px-4 py-3.5 rounded-xl w-48 font-bold text-center shadow-xl shadow-gray-100 active:scale-95" href="javascript:;">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -257,8 +257,8 @@
                        
                     </div>
                      <!-- If we need navigation buttons -->
-                     <div class="swiper-button-prev bg-blue-950 w-10 h-10 rounded-full lg:hidden top-[90px]"></div>
-                     <div class="swiper-button-next bg-blue-950 w-10 h-10 rounded-full lg:hidden top-[90px]"></div>
+                     <div class="swiper-button-prev bg-gray-900 w-10 h-10 rounded-full lg:hidden top-[90px]"></div>
+                     <div class="swiper-button-next bg-gray-900 w-10 h-10 rounded-full lg:hidden top-[90px]"></div>
                 </div>
             </div>
            
